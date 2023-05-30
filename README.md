@@ -7,7 +7,7 @@
  - Run the command `wsl --install`
  - Download newest Fedora release by pressing the .msixbundle file in the Assets [here](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL/releases)
  - Once the file is downloaded run the file and let the installer run
- - In the new terminal enter your user name and password (remember your is password it is very important!)
+ - In the new terminal enter your user name and password (remember your password it is very important!)
  - In the **fedora** terminal run `sudo bash -c 'echo -e "[interop] \n appendWindowsPath = false" >> /etc/wsl.conf'`
  - Close all fedora terminal windows 
  - In a **powershell** terminal run `wslconfig /t fedoraremix`
