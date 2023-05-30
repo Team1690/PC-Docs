@@ -28,7 +28,17 @@
  - Press Ctrl+o and open the /home/your_user_name/.bashrc file
  - Paste this to the bottom of the .bashrc file `export PATH="$PATH:/home/your_username/flutter/bin"`
  - Open a new terminal and run `flutter doctor`
- - Run the command `sudo dnf install clang cmake ninja-build gtk3-devel`
- - Run `flutter doctor` again, now this should be written: [✓] Linux toolchain - develop for Linux desktop
  - You have officially Downloaded Flutter!
 
+## Flutter native linux app setup
+ - Run the command `sudo dnf install clang cmake ninja-build gtk3-devel`
+ - Run `flutter doctor` again, now this should be written: [✓] Linux toolchain - develop for Linux desktop
+
+## Flutter web app setup
+ - Run these three commands 
+  - `sudo dnf install fedora-workstation-repositories` 
+  - `sudo dnf config-manager --set-enabled google-chrome` 
+  - `sudo dnf install google-chrome-stable`
+
+## Flutter native android setup
+ - TODO: when needed
