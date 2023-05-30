@@ -39,6 +39,7 @@
   - `sudo dnf install fedora-workstation-repositories` 
   - `sudo dnf config-manager --set-enabled google-chrome` 
   - `sudo dnf install google-chrome-stable`
+ - Run `flutter doctor` again, now this should be written: [✓] Chrome - develop for the web
 
 ## Flutter native android setup
  - TODO: when needed
