@@ -1,4 +1,5 @@
 # Dev environemnt setup
+## Operating System setup
  - Download Vscode from [here](https://code.visualstudio.com/)
  - Download the extension for vscode named: WSL (created by microsoft)
  - Download Windows Terminal from [here](https://www.microsoft.com/store/productId/9N0DX20HK701)
@@ -13,9 +14,11 @@
  - In a new fedora terminal (Use windows terminal to open a new terminal) run `sudo dnf upgrade` enter your password and wait (press y when they ask)
  - You have finished downloading the Operating System!
 
+## Git setup
  - Run the command `sudo dnf install git`
  - TODO: add SSH keygen explanation
 
+## Flutter setup
  - Copy the link of the latest flutter release from [here](https://docs.flutter.dev/release/archive?tab=linux)
  - Run the command `wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_(CORRECT_VERSION_HERE)-stable.tar.xz`
     - You should paste the correct link (The one you copied) with Ctrl+Shift+v
