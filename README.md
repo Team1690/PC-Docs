@@ -4,6 +4,12 @@
  - Windows shell instances: (powershell/cmd) doesn't really matter which
  - WSL: a feature of Windows that allows developers to run a Linux environment without the need for a separate virtual machine
  - Fedora Remix: a linux distrobution
+ - bash: the default shell fedora uses (equivalent to cmd/powershell on windows)
+
+## Prequisites:
+ - What a terminal is
+ - Directorys, Paths, Files
+ - Basic use of a terminal with: cd, ls, mkdir
 
 ## Operating System setup
  - Download Vscode bt running `winget install -e --id Microsoft.VisualStudioCode` in a windows shell instance
