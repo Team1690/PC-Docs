@@ -47,6 +47,7 @@
     - `.bashrc`: a bash script that is run everytime a bash shell starts
     - `. ~/.bashrc`: Reruns the `.bashrc` file (we need to de this because changes where made to the file)
     - `~`: a shrortcut for /home/your_username/
+ - Check your installation by running: `flutter doctor` and ensure you see this: [✓] Flutter (Channel stable, .....)
  - You have officially Downloaded Flutter!
 
 ## Flutter native linux app setup
