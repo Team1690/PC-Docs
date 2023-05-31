@@ -1,18 +1,29 @@
 # Dev environemnt setup
+
+# Terms 
+ - Windows shell instances: (powershell/cmd) doesn't really matter which
+ - WSL: a feature of Windows that allows developers to run a Linux environment without the need for a separate virtual machine
+ - Fedora Remix: a linux distrobution
+
 ## Operating System setup
- - Download Vscode from [here](https://code.visualstudio.com/)
- - Download the extension for vscode named: WSL (created by microsoft)
- - Download Windows Terminal from [here](https://www.microsoft.com/store/productId/9N0DX20HK701)
- - Run a powershell instance as administrator (Right click should show a Run as administrator option) 
- - Run the command `wsl --install`
- - Download newest Fedora release by pressing the .msixbundle file in the Assets [here](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL/releases)
+ - Download Vscode bt running `winget install -e --id Microsoft.VisualStudioCode` in a windows shell instance
+ - Download the extension for vscode named WSL by pressing Ctrl+p, pasting this `ext install ms-vscode-remote.remote-wsl` and pressing enter
+ - Ensure you have Windows Terminal installed by running `winget install microsoft.windowsterminal` in a windows shell instance
+ - Run a windows shell instance as administrator (Right click should show a Run as administrator option) 
+ - Install wsl with `wsl --install`
+ - Download newest Fedora Remix WSL release by pressing the .msixbundle file in the Assets [here](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL/releases)
  - Once the file is downloaded run the file and let the installer run
- - In the new terminal enter your user name and password (remember your password it is very important!)
- - In the **fedora** terminal run `sudo bash -c 'echo -e "[interop] \n appendWindowsPath = false" >> /etc/wsl.conf'`
+ - In the new **fedora** shell that opened enter your user name and password for the fedora account mkae the password memorable because you will write it alot
+ - In a **fedora** shell change the wsl config by running the command below. After that enter your password. Every command that uses `sudo` will request a password, `sudo` means you want to run the command with elevated permissions. **when writing the password the letters aren't shown**
+   - `printf '[interop]\nappendWindowsPath = false' | sudo tee -a /etc/wsl.conf` (This appends the string to a file)
  - Close all fedora terminal windows 
- - In a **powershell** terminal run `wslconfig /t fedoraremix`
- - In a new fedora terminal (Use windows terminal to open a new terminal) run `sudo dnf upgrade` enter your password and wait (press y when they ask)
+ - In a windows shell instance restart fedoraremix with the new configuration by running `wslconfig /t fedoraremix`
+ - In a new fedora terminal (Use windows terminal to open a new terminal) update everything on your system with `sudo dnf upgrade -y` 
+   - (`sudo` because this command needs elevated permission, `dnf` is the package manager, it helps you install, find and in this case `upgrade`  packages on your system (of course it does alot of other things), The `-y` flag means we want to accept everything installed without `dnf` asking)
+ - Make sure fedoraremix is your default wsl distrobutions by running `wsl --set-default fedoraremix` in a **windows** shell instance
+ - Make sure you are using WSL2 by running `wsl -l -v` (`-l`: list, `-v`: verbose) in a **windows** shell instance and make sure the vesion of `fedoraremix` is 2
  - You have finished downloading the Operating System!
+
 
 ## Git setup
  - Run the command `sudo dnf install git`
