@@ -40,13 +40,13 @@
  - On your first clone ssh will prompt you about a new host just enter `yes`
 
 ## Flutter setup
- - Download flutter by cloning the git repository by running: `git clone --branch stable --single-branch --filter=blob:none git@github.com:flutter/flutter` 
- - Open Vscode and press the blue button in the bottom left corener and press Connect to WSL
- - Press Ctrl+o and open the /home/your_user_name/.bashrc file
- - Paste this to the bottom of the .bashrc file `export PATH="${PATH}:${HOME}/flutter/bin"`
- - Run the commands
-   - `. ~/.bashrc` this commands runs the .bashrc again (We need to run it again because we made changes)
-   - `flutter doctor`
+ - Download flutter by cloning the git repository into a path of your choice by running: `git clone --branch stable --single-branch --filter=blob:none git@github.com:flutter/flutter` 
+ - Add flutter to `$PATH` by running: `echo 'export PATH="${PATH}:/path/to/clone/flutter/bin"' >> ~/.bashrc` and then run `. ~/.bashrc` 
+    - `echo`: Prints a given string to the terminal (stdout)
+    - `>>`: Redirects the output (stdout) of a specfic command to a somewhere else in this case a file (`~/.bashrc`)
+    - `.bashrc`: a bash script that is run everytime a bash shell starts
+    - `. ~/.bashrc`: Reruns the `.bashrc` file (we need to de this because changes where made to the file)
+    - `~`: a shrortcut for /home/your_username/
  - You have officially Downloaded Flutter!
 
 ## Flutter native linux app setup
@@ -54,9 +54,7 @@
  - Run `flutter doctor` again, now this should be written: [✓] Linux toolchain - develop for Linux desktop
 
 ## Flutter web app setup
- - Install chromium: `sudo dnf install chromium`
- - Open .bashrc file in vscode and paste this: `export CHROME_EXECUTABLE=$(which chromium-browser)`
- - Run the commands
-   - `. ~/.bashrc` this commands runs the .bashrc again (We need to run it again because we made changes)
-   - `flutter doctor`
+ - Install chromium: `sudo dnf install chromium -y`
+ - Add this to your `.bashrc` file: `export CHROME_EXECUTABLE=$(which chromium-browser)` (Look at Flutter setup for refresher)
+ - Run: `flutter doctor` and you should see this: [✓] Chrome - develop for the web
 
