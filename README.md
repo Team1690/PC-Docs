@@ -19,15 +19,18 @@
  - Close all fedora terminal windows 
  - In a windows shell instance restart fedoraremix with the new configuration by running `wslconfig /t fedoraremix`
  - In a new fedora terminal (Use windows terminal to open a new terminal) update everything on your system with `sudo dnf upgrade -y` 
-   - (`sudo` because this command needs elevated permission, `dnf` is the package manager, it helps you install, find and in this case `upgrade`  packages on your system (of course it does alot of other things), The `-y` flag means we want to accept everything installed without `dnf` asking)
+   - `sudo` because this command needs elevated permission. 
+   - `dnf` is the package manager, it helps you install, find and in this case `upgrade` packages on your system (of course it does alot of other things). 
+   - The `-y` flag means we want to accept everything installed without `dnf` asking to accept
  - Make sure fedoraremix is your default wsl distrobutions by running `wsl --set-default fedoraremix` in a **windows** shell instance
  - Make sure you are using WSL2 by running `wsl -l -v` (`-l`: list, `-v`: verbose) in a **windows** shell instance and make sure the vesion of `fedoraremix` is 2
  - You have finished downloading the Operating System!
+ - From now on we will be working almost only with fedora. This means that when you search for instructions on how to do things you search for **Fedora** instructions not Windows instructions.
 
 
 ## Git setup
- - Run the command `sudo dnf install git`
- - TODO: add SSH keygen explanation
+ - Install git in Fedora with this command: `sudo dnf install git -y`
+ - Setup a github ssh key by following the instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
 ## Flutter setup
  - Copy the link of the latest flutter release from [here](https://docs.flutter.dev/release/archive?tab=linux)
