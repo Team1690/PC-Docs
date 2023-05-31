@@ -31,29 +31,26 @@
 ## Git setup
  - Install git in Fedora with this command: `sudo dnf install git -y`
  - Setup a github ssh key by following the instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+ - On your first clone ssh will prompt you about a new host just enter `yes`
 
 ## Flutter setup
- - Copy the link of the latest flutter release from [here](https://docs.flutter.dev/release/archive?tab=linux)
- - Run the command `wget https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_(CORRECT_VERSION_HERE)-stable.tar.xz`
-    - You should paste the correct link (The one you copied) with Ctrl+Shift+v
- - Once the download finishes run the command `tar xf flutter_linux_(CORRECT_VERSION_HERE)-stable.tar.xz` 
-    - You can find the exact file name with `ls`
+ - Download flutter by cloning the git repository by running: `git clone --branch stable --single-branch --filter=blob:none git@github.com:flutter/flutter` 
  - Open Vscode and press the blue button in the bottom left corener and press Connect to WSL
  - Press Ctrl+o and open the /home/your_user_name/.bashrc file
- - Paste this to the bottom of the .bashrc file `export PATH="$PATH:/home/your_username/flutter/bin"`
- - Open a new terminal and run `flutter doctor`
+ - Paste this to the bottom of the .bashrc file `export PATH="${PATH}:${HOME}/flutter/bin"`
+ - Run the commands
+   - `. ~/.bashrc` this commands runs the .bashrc again (We need to run it again because we made changes)
+   - `flutter doctor`
  - You have officially Downloaded Flutter!
 
 ## Flutter native linux app setup
- - Run the command `sudo dnf install clang cmake ninja-build gtk3-devel`
+ - Install needed packages for linux development by running: `sudo dnf install clang cmake ninja-build gtk3-devel -y`
  - Run `flutter doctor` again, now this should be written: [✓] Linux toolchain - develop for Linux desktop
 
 ## Flutter web app setup
- - Run these three commands 
-  - `sudo dnf install fedora-workstation-repositories` 
-  - `sudo dnf config-manager --set-enabled google-chrome` 
-  - `sudo dnf install google-chrome-stable`
- - Run `flutter doctor` again, now this should be written: [✓] Chrome - develop for the web
+ - Install chromium: `sudo dnf install chromium`
+ - Open .bashrc file in vscode and paste this: `export CHROME_EXECUTABLE=$(which chromium-browser)`
+ - Run the commands
+   - `. ~/.bashrc` this commands runs the .bashrc again (We need to run it again because we made changes)
+   - `flutter doctor`
 
-## Flutter native android setup
- - TODO: when needed
