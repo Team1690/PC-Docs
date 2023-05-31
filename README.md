@@ -21,7 +21,7 @@
  - Once the file is downloaded run the file and let the installer run
  - In the new **fedora** shell that opened enter your user name and password for the fedora account mkae the password memorable because you will write it alot
  - In a **fedora** shell change the wsl config by running the command below. After that enter your password. Every command that uses `sudo` will request a password, `sudo` means you want to run the command with elevated permissions. **when writing the password the letters aren't shown**
-   - `printf '[interop]\nappendWindowsPath = false' | sudo tee -a /etc/wsl.conf` (This appends the string to a file)
+   - `printf '[interop]\nappendWindowsPath = false' | sudo tee -a /etc/wsl.conf` (This appends the string to a file that needs elevated permissions to be written to)
  - Close all fedora terminal windows 
  - In a windows shell instance restart fedoraremix with the new configuration by running `wslconfig /t fedoraremix`
  - In a new fedora terminal (Use windows terminal to open a new terminal) update everything on your system with `sudo dnf upgrade -y` 
