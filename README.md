@@ -12,7 +12,7 @@
  - Basic use of a terminal with: cd, ls, mkdir
 
 ## Operating System setup
- - Download Vscode bt running `winget install -e --id Microsoft.VisualStudioCode` in a windows shell instance
+ - Download Vscode by running `winget install -e --id Microsoft.VisualStudioCode` in a windows shell instance
  - Download the extension for vscode named WSL by pressing Ctrl+p, pasting this `ext install ms-vscode-remote.remote-wsl` and pressing enter
  - Ensure you have Windows Terminal installed by running `winget install microsoft.windowsterminal` in a windows shell instance
  - Run a windows shell instance as administrator (Right click should show a Run as administrator option) 
