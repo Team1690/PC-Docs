@@ -1,9 +1,9 @@
 # Dev environemnt setup
 
-# Terms 
+## Terms 
  - Windows shell instances: (powershell/cmd) doesn't really matter which
  - WSL: a feature of Windows that allows developers to run a Linux environment without the need for a separate virtual machine
- - Fedora Remix: a linux distrobution
+ - Fedora Remix: a linux distribution
  - bash: the default shell fedora uses (equivalent to cmd/powershell on windows)
 
 ## Prequisites:
