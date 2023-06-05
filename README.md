@@ -1,7 +1,9 @@
 # Dev environemnt setup
 
 ## Terms 
- - Windows shell instances: (powershell/cmd) doesn't really matter which
+ - shell: the (usually) textual interface to the operating system, i.e. CMD, bash, PowerShell, ash, fish, zsh...
+ - terminal: the application / window in which some shell runs.
+ - Windows shell instances: (powershell/cmd) doesn't really matter which one, unless specified otherwise explicitly.
  - WSL: a feature of Windows that allows developers to run a Linux environment without the need for a separate virtual machine
  - Fedora Remix: a linux distribution
  - bash: the default shell fedora uses (equivalent to cmd/powershell on windows)
