@@ -1,5 +1,12 @@
 # Dev environemnt setup
 
+This file is an explanation on how to setup the development environment for PC subteam projects.
+
+I recommend that you write all the commands by hand instead of copying them directly from this file.
+
+## Prerequisites:
+- Basic use of a terminal with: cd, ls, mkdir, pwd
+
 ## Terms 
  - shell: the (usually) textual interface to the operating system, i.e. CMD, bash, PowerShell, ash, fish, zsh...
  - terminal: the application / window in which some shell runs.
@@ -8,8 +15,6 @@
  - Fedora Remix: a linux distribution
  - bash: the default shell fedora uses (equivalent to cmd/powershell on windows)
 
-## Prerequisites:
- - Basic use of a terminal with: cd, ls, mkdir
 
 ## Operating System setup
  - Download Vscode by running `winget install -e --id Microsoft.VisualStudioCode` in a windows shell instance
@@ -36,8 +41,8 @@
 
 ## Git setup
  - Install git in Fedora with this command: `sudo dnf install git -y`
- - Setup a github ssh key by following the instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
- - On your first clone ssh will prompt you about a new host just enter `yes`
+ - Setup a github ssh key by following the **linux** instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+ - On your first clone ssh will prompt you about a new host you should enter `yes` because github.com is a trusted host
 
 ## Flutter setup
  - Download flutter by cloning the git repository into a path of your choice by running: `git clone --branch stable --single-branch --filter=blob:none git@github.com:flutter/flutter` 
