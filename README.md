@@ -8,9 +8,7 @@
  - Fedora Remix: a linux distribution
  - bash: the default shell fedora uses (equivalent to cmd/powershell on windows)
 
-## Prequisites:
- - What a terminal is
- - Directorys, Paths, Files
+## Prerequisites:
  - Basic use of a terminal with: cd, ls, mkdir
 
 ## Operating System setup
