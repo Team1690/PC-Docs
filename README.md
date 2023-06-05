@@ -41,12 +41,16 @@ I recommend that you write all the commands by hand instead of copying them dire
 
 ## Git setup
  - Install git in Fedora with this command: `sudo dnf install git -y`
- - Setup a github ssh key by following the **linux** instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+ - SSH setup:
+    - Generate ssh keys by running the command: `ssh-keygen -t ed25519 -C "your_email@example.com"`
+    - `> Enter a file in which to save the key (/home/YOU/.ssh/ALGORITHM):` Confirm this prompt py pressing enter
+    - `> Enter passphrase (empty for no passphrase):` If you want a passphrase enter one here or just press enter if you don't want one (for our needs you probably don't want one)
+    - Follow the instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux) for adding your ssh key to github
  - On your first clone ssh will prompt you about a new host you should enter `yes` because github.com is a trusted host
 
 ## Flutter setup
  - Download flutter by cloning the git repository into a path of your choice by running: `git clone --branch stable --single-branch --filter=blob:none git@github.com:flutter/flutter` 
- - Add flutter to `$PATH` by running: `echo 'export PATH="${PATH}:/path/to/clone/flutter/bin"' >> ~/.bashrc` and then run `. ~/.bashrc` 
+ - Add flutter to `$PATH` by running: `echo 'export PATH="${PATH}:/path/to/clone/flutter/bin"' >> ~/.bashrc` (Remember to change the `/path/to/clone` to the real path) and then run `. ~/.bashrc` 
     - `echo`: Prints a given string to the terminal (stdout)
     - `>>`: Redirects the output (stdout) of a specfic command to a somewhere else in this case a file (`~/.bashrc`)
     - `.bashrc`: a bash script that is run everytime a bash shell starts
