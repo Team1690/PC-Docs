@@ -50,7 +50,7 @@ I recommend that you write all the commands by hand instead of copying them dire
 ## Flutter setup
  - Download flutter by cloning the git repository into a path of your choice by running: `git clone --branch stable --single-branch --filter=blob:none git@github.com:flutter/flutter` 
   - This is probably your first clone, so ssh will prompt you about a new host you should enter `yes` because github.com is a trusted host
- - Add flutter to `$PATH` by running: `echo 'export PATH="${PATH}:/path/to/clone/flutter/bin"' >> ~/.bashrc` (Remember to change the `/path/to/clone` to the real path) and then run `. ~/.bashrc` 
+ - Add flutter to `$PATH` by running: `echo 'export PATH="${PATH}:'"${PWD}/flutter/bin\"" >> ~/.bashrc` and then run `. ~/.bashrc` 
     - `echo`: Prints a given string to the terminal (stdout)
     - `>>`: Redirects the output (stdout) of a specfic command to a somewhere else in this case a file (`~/.bashrc`)
     - `.bashrc`: a bash script that is run everytime a bash shell starts
