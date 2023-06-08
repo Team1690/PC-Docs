@@ -42,11 +42,10 @@ I recommend that you write all the commands by hand instead of copying them dire
 ## Git setup
  - Install git in Fedora with this command: `sudo dnf install git -y`
  - SSH setup:
-    - Generate ssh keys by running the command: `ssh-keygen -t ed25519 -C "your_email@example.com"`
-    - `> Enter a file in which to save the key (/home/YOU/.ssh/ALGORITHM):` Confirm this prompt py pressing enter
-    - `> Enter passphrase (empty for no passphrase):` If you want a passphrase enter one here or just press enter if you don't want one (for our needs you probably don't want one)
-    - Follow the instructions [here](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account?platform=linux) for adding your ssh key to github
-
+   - Generate an ssh key by running `ssh-keygen`. Unless you *want* to change the default location or use a passphrase, just press enter and use the defaults.
+   - Copy the public key by copying the complete output of this command `cat ~/.ssh/id_rsa.pub`
+   - Paste the public key into GitHub > Settings > SSH and GPG keys > New SSH key > key. (You don't need to set a title or a key type).
+   - If you want to generate the key in a different path, use a passphrase to protect it or any other optional features you can [`man ssh-keygen`](https://www.man7.org/linux/man-pages/man1/ssh-keygen.1.html) or [`curl cheat.sh/ssh-keygen`](https://cheat.sh/ssh-keygen).
 ## Flutter setup
  - Download flutter by cloning the git repository into a path of your choice by running: `git clone --branch stable --single-branch --filter=blob:none git@github.com:flutter/flutter` 
   - This is probably your first clone, so ssh will prompt you about a new host you should enter `yes` because github.com is a trusted host
