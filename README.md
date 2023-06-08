@@ -5,7 +5,9 @@ This file is an explanation on how to setup the development environment for PC s
 I recommend that you write all the commands by hand instead of copying them directly from this file.
 
 ## Prerequisites:
-- Basic use of a terminal with: cd, ls, mkdir, pwd
+- Basic use of a terminal with: `cd`, `ls`, `mkdir`, `pwd`, `echo`, `rmdir`, `touch`, `rm`. 
+  - After you followed the `sudo mandb` section in the Operating System setup, Use `whatis` and `man` to learn what these commands do 
+  
 
 ## Terms 
  - shell: the (usually) textual interface to the operating system, i.e. CMD, bash, PowerShell, ash, fish, zsh...
@@ -33,6 +35,7 @@ I recommend that you write all the commands by hand instead of copying them dire
    - `sudo` because this command needs elevated permission. 
    - `dnf` is the package manager, it helps you install, find and in this case `upgrade` packages on your system (of course it does alot of other things). 
    - The `-y` flag means we want to accept everything installed without `dnf` asking to accept
+ - Update your `man` and `whatis` entries by running the command: `sudo mandb`
  - Make sure fedoraremix is your default wsl distrobutions by running `wsl --set-default fedoraremix` in a **windows** shell instance
  - Make sure you are using WSL2 by running `wsl -l -v` (`-l`: list, `-v`: verbose) in a **windows** shell instance and make sure the vesion of `fedoraremix` is 2
  - You have finished downloading the Operating System!
