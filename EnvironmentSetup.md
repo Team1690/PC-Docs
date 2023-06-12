@@ -67,6 +67,6 @@ I recommend that you write all the commands by hand instead of copying them dire
 
 ## Flutter web app setup
  - Install chromium: `sudo dnf install chromium -y`
- - Add this to your `.bashrc` file: `export CHROME_EXECUTABLE=$(which chromium-browser)` (Look at Flutter setup for refresher)
+ - Add a new line to your `~/.bashrc` by running `echo "export CHROME_EXECUTABLE=$(which chromium-browser)" >> ~/.bashrc` 
  - Run: `flutter doctor` and you should see this: [✓] Chrome - develop for the web
 
